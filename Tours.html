@@ -1,0 +1,175 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tours - Xilitla 4x4</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.carrusel{text-align:center;margin:20px}
+.carrusel img{width:400px;height:300px;object-fit:cover}
+button{padding:8px 15px;margin:5px}
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<div id="logo"><img src="Xilitla4x41.jpeg" width="150" height="50"></div>
+<div id="slogan"><h1>Xilitla 4x4</h1></div>
+</header>
+
+<nav>
+<b>Menú</b><br><br><br>
+<a href="practica div.html">Bienvenida</a>
+<a href="tours.html">Tours</a>
+<a href="vehiculos.html">Vehículos</a>
+<a href="experiencia.html">Experiencia</a>
+<a href="contacto.html">Contacto</a>
+</nav>
+
+<section>
+
+<h2>Nuestros Tours</h2>
+
+<p>
+Vive Xilitla de una manera diferente con nuestros recorridos
+llenos de naturaleza, aventura y adrenalina.
+</p>
+
+<!-- NANACATLI -->
+<h2>Tour Nanacatli</h2>
+<div class="carrusel">
+<img id="foto1" src="xilitla4x48.jpeg">
+<br>
+<button onclick="cambiar(0,-1)">❮</button>
+<button onclick="cambiar(0,1)">❯</button>
+</div>
+
+<p>
+🏡 Aldea Nanacatli<br>
+🌄 Mirador Xilitla<br>
+🕳️ Túnel Tlahuilapa<br>
+🛤️ Camino Antiguo a las Pozas
+</p>
+
+<!-- MIRADORES -->
+<h2>Tour Miradores</h2>
+<div class="carrusel">
+<img id="foto2" src="ruta miradores.jpeg">
+<br>
+<button onclick="cambiar(1,-1)">❮</button>
+<button onclick="cambiar(1,1)">❯</button>
+</div>
+
+<p>
+🌄 Mirador Xilitla<br>
+⛰️ Mirador Cerro Quebrado<br>
+🕳️ Túnel Tlahuilapa
+</p>
+
+<!-- TRINIDAD -->
+<h2>Tour Trinidad</h2>
+<div class="carrusel">
+<img id="foto3" src="trinidad.jpeg">
+<br>
+<button onclick="cambiar(2,-1)">❮</button>
+<button onclick="cambiar(2,1)">❯</button>
+</div>
+
+<p>
+🌫️ Bosque de Niebla La Trinidad<br>
+🏡 Aldea Nanacatli<br>
+🌄 Mirador Xilitla
+</p>
+
+<!-- NACIMIENTO -->
+<h2>Tour Nacimiento</h2>
+<div class="carrusel">
+<img id="foto4" src="naci.jpeg">
+<br>
+<button onclick="cambiar(3,-1)">❮</button>
+<button onclick="cambiar(3,1)">❯</button>
+</div>
+
+<p>
+💧 Nacimiento<br>
+🕳️ Cueva de las Quilas<br>
+🛶 Actividad en kayak<br>
+🕳️ Túnel de piedra
+</p>
+
+<h2>Vive Xilitla 4x4</h2>
+
+<p>
+Naturaleza, aventura y adrenalina en una experiencia
+que recordarás.
+</p>
+
+</section>
+
+<footer>
+
+<h2>¡Síguenos y vive la aventura!</h2>
+
+<p>
+Conoce nuestras rutas, vehículos y próximas aventuras
+en Xilitla 4x4.
+</p>
+
+<div class="redes">
+
+<a href="https://www.facebook.com/" target="_blank">
+<span>📘</span>
+Facebook
+</a>
+
+<a href="https://www.instagram.com/" target="_blank">
+<span>📸</span>
+Instagram
+</a>
+
+<a href="mailto:contacto@xilitla4x4.com">
+<span>✉️</span>
+Correo
+</a>
+
+</div>
+
+<p class="contacto">
+📞 444 189 0212 &nbsp;&nbsp; | &nbsp;&nbsp;
+📞 481 147 1699
+</p>
+
+<p class="contacto">
+📍 Camino Antiguo a Las Pozas, 79900 Xilitla, S.L.P.
+</p>
+
+</footer>
+
+</div>
+
+<script>
+
+let fotos=[
+["xilitla4x48.jpeg","nanacatli.jpeg","xilitla4x43.jpeg","mirador1.jpeg"],
+["ruta miradores.jpeg","mirador1.jpeg","cerro quebrado 2.jpeg"],
+["trinidad.jpeg","tunel.jpeg","trini.jpeg","trini2.jpeg"],
+["naci.jpeg","naci1.jpeg","naci2.jpeg","tunel.jpeg","mirador1.jpeg"]
+];
+
+let pos=[0,0,0,0];
+
+function cambiar(c,d){
+pos[c]=(pos[c]+d+fotos[c].length)%fotos[c].length;
+document.getElementById("foto"+(c+1)).src=fotos[c][pos[c]];
+}
+
+</script>
+
+</body>
+</html>
+```
