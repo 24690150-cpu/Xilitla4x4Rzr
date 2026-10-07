@@ -1,0 +1,154 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Experiencia - Xilitla 4x4</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.carrusel{text-align:center;margin:25px}
+.carrusel img{width:400px;height:300px;object-fit:cover}
+button{padding:8px 15px;margin:5px}
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+
+<div id="logo">
+<img src="Xilitla4x41.jpeg" width="150" height="50">
+</div>
+
+<div id="slogan">
+<h1>Xilitla 4x4</h1>
+</div>
+
+</header>
+
+<nav>
+<b>Menú</b><br><br><br>
+<a href="index.html">Bienvenida</a>
+<a href="tours.html">Tours</a>
+<a href="vehiculos.html">Vehículos</a>
+<a href="experiencia.html">Experiencia</a>
+<a href="contacto.html">Contacto</a>
+</nav>
+
+<section>
+
+<h2>Vive la Experiencia Xilitla 4x4</h2>
+
+<p>
+En Xilitla 4x4 queremos que cada recorrido
+sea una experiencia llena de aventura,
+naturaleza y adrenalina.
+</p>
+
+<div class="carrusel">
+<img id="foto" src="Xilitla4x44.jpeg">
+<br>
+<button onclick="cambiar(-1)">❮</button>
+<button onclick="cambiar(1)">❯</button>
+</div>
+
+<h2>Aventura</h2>
+
+<p>
+Recorre caminos naturales, montañas y senderos
+a bordo de un vehículo todo terreno y disfruta
+de la emoción de conocer Xilitla de una manera
+diferente.
+</p>
+
+<h2>Naturaleza</h2>
+
+<p>
+Descubre paisajes increíbles, miradores,
+bosques, cuevas, ríos y lugares naturales
+de la Huasteca Potosina.
+</p>
+
+<h2>Momentos inolvidables</h2>
+
+<p>
+Comparte la aventura con tu familia y amigos,
+disfruta cada recorrido y crea recuerdos
+que podrás llevar contigo.
+</p>
+
+<h2>¡Prepárate para la aventura!</h2>
+
+<p>
+Ven a conocer Xilitla, elige tu tour y vive
+una experiencia llena de emoción con
+Xilitla 4x4.
+</p>
+
+</section>
+
+<footer>
+
+<h2>¡Síguenos y vive la aventura!</h2>
+
+<p>
+Conoce nuestras rutas, vehículos y próximas aventuras
+en Xilitla 4x4.
+</p>
+
+<div class="redes">
+
+<a href="https://www.facebook.com/" target="_blank">
+<span>📘</span>
+Facebook
+</a>
+
+<a href="https://www.instagram.com/" target="_blank">
+<span>📸</span>
+Instagram
+</a>
+
+<a href="mailto:contacto@xilitla4x4.com">
+<span>✉️</span>
+Correo
+</a>
+
+</div>
+
+<p class="contacto">
+📞 444 189 0212 &nbsp;&nbsp; | &nbsp;&nbsp;
+📞 481 147 1699
+</p>
+
+<p class="contacto">
+📍 Camino Antiguo a Las Pozas, 79900 Xilitla, S.L.P.
+</p>
+
+</footer>
+
+</div>
+
+<script>
+
+let fotos=[
+"Xilitla4x44.jpeg",
+"Xilitla4x45.jpeg",
+"Xilitla4x46.jpeg"
+];
+
+let pos=0;
+
+function cambiar(d){
+pos=(pos+d+fotos.length)%fotos.length;
+document.getElementById("foto").src=fotos[pos];
+}
+
+</script>
+
+</body>
+</html>
+```
